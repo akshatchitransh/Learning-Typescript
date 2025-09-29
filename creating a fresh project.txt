@@ -1,0 +1,11 @@
+npm init -y--> creates package.json 
+npm install typescript
+npx tsc --init  ---> install the4 compiler (this will create a tsconfig.json)
+index.ts(ham ts me js hamesha likh sakte hian kuki ts is a superset of js)
+tsc -b  --> in the terminal to convert the ts filt to js file 
+
+always check that the node modules file is there
+
+
+
+
