@@ -1,0 +1,11 @@
+Strongly Typed - 
+Loosely typed - 
+compiled - jesse cp 
+1- pehle compilation (cpp se binary me code convert karna(kuch set of rules already rehte hain vo check karna ki kahi string me int to assign ni kar diya)) then run time Error (code ke execution ko dekhna chala or ni cala to kya error aya)
+
+interpreted or jit - compilation vgera ni hoga kewal run time (production ya use karte time fat jaega) matlab koi pre check ni hoga ki aise set of rules ke according code likha hona chhiye (ye pehla check to hoga hi)
+
+
+-------------------------------------------
+ts --> js--> then browser or node js 
+ts-->js compilation hoga pehle ts ka js me via typescript compiler
