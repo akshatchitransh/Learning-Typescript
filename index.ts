@@ -69,3 +69,109 @@ let uuser:UserType ={
 ,
 age:21}
 ggreeet(uuser)
+
+type User = {
+    firstname:string,
+    age:number
+}
+//fromabove we can co nclude tha tonterface and type are two same things but type come with few more added advantages .
+
+interface name {}
+type names = {}
+type namess = string| number;
+// above line cannot be written with the help og interface
+
+
+//type can be used to calculate the intersection also 
+
+type Employee = {name:string,department:string}
+type Manager = {name :string,startdate:Date}
+
+type teamlead = Employee & Manager;
+
+//so the team lead contains name department and startdate
+/*interface Employee = {name:string,department:string}
+interface Manager = {name :string,startdate:Date}
+type teamlead = Employee & Manager;*/
+
+interface Userout {
+    name:string,
+    age:number,
+    address?:address
+    }
+
+ const amuser:Userout= {
+     name:"string",
+    age:21,
+    address:address
+
+
+} 
+
+//interface me key:value me value khud bhi ek interface ho sakta hai
+interface address {
+     street:string,
+        no:number
+}
+
+
+//interfaces can be implemented as classes but types can not//see the syntax of how we write a fubction in actual object , insidea  function , inside a class in both cases like when creating a class object and while declaring it in object.   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
