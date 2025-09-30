@@ -1,0 +1,30 @@
+INterface :
+1- datatype
+2- can be used to implement classes
+3- iske andar directly functiomn ni likh sakte , kewal return type likha jata hai or class em function define kiya jay=ta hai 
+
+
+ABSTRACT CLASSES
+1- ek class hi hai 
+2- used to extend class
+3- iske andar function directly bhi likh sakte hian 
+4- iske andar agar abstract karke function likhte ahin to uski body ni likhte hain , vo har subclass determine karta hai jese meow , bhow bhow.
+
+
+
+abstract class MyAbstractClass {
+    abstract sayHi: () => void;
+}
+
+class MyClass extends MyAbstractClass {
+    greet(): string {
+        return "Hello from subclass";
+    }
+
+    sayHi = () => {
+        console.log("Hi from subclass");
+    };
+}
+
+
+//just see how fgunctions are declared and called in each of the case in interface in implements  , in class , in absbytract function
