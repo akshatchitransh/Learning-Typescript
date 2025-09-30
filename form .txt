@@ -1,0 +1,65 @@
+HOW DO WE SEND DATA USING A FORM 
+1-HTML --> onsubmit(link , method)
+method get --> data will go to backend via name tag in the url in form of query (not params)
+method post ---> the data will go to backend via body and in both above cases the data gets automatically transferred 
+
+2-REACT  
+onchangehandler - jab bhi for data change ho usko value variable me jisme data hai usko change kare.
+
+onsubmithandler - it will recieve valu in arguments and make a 
+  const res = await fetch("/api/auth/signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      })
+
+
+      SOME BEAQUTIFUL CONCLUSIONS;
+      1- data sending 
+      a. query->URL me ? ke bad key value pair (req.query.name)
+      b. params-> URL me / ke bad matlab localhost/signup/98980980(req.params)
+backend me 
+app.get(/signup/:id/:name,(req,res){
+    req.params.id 
+    req.params.name
+})
+
+
+
+      c. body form me post request . 
+      form me method post,
+      headers me application/json
+      body:JSON.stringify(values);
+
+
+      URLENCODED
+      jab bhi hum query ke through data bhejte hain tab 
+      ?email=akshat.chitransh@gmail.com&name=akshat
+
+      to ye url ek particular format me hi ja sakti hai uske jese@ cahnges to%40
+      to backend me vapis ye decoded data mil jhae isliye app.use(urlencoded)
+
+
+
+      TOKEN WALLAH??
+      backend me token = jwt.sign vagera 
+      res.json({token,msg:"success"})
+
+      frontend me 
+      if(res.ok){
+        localStorage.setItem("accessToken",data.token)
+      }
+
+       ab bhejna token ko 
+       const token = localStorage.getItem("accessToken")
+
+       fetch (,{
+        method:"POST",
+        headers:{
+            "Content-Type": "application/json"
+            "Authorizatoin":`Bearer${token}`
+        },
+        body: JSON.stringify(name:"Akshat")
+       })
+
+       fetch me body me string bhejna padta hai isliyer json.stringify
