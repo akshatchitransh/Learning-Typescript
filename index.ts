@@ -117,19 +117,160 @@ interface address {
 
 //interfaces can be implemented as classes but types can not//see the syntax of how we write a fubction in actual object , insidea  function , inside a class in both cases like when creating a class object and while declaring it in object.   
 
+interface x{
+    name:string,
+    isLegal():boolean
+}
+
+let xy : x ={
+    name:"akshat",
+    isLegal() {
+        console.log("hi");
+        return true;
+    }
+} 
+
+class Managersss implements x {
+    name:string;
+    age:number;
+    isLegal(): boolean {
+        return this.age<18
+    }
+    k:number
+    constructor(name:string,age:number,k:number)
+    {
+        this.age = age;
+        this.name = name;
+this.k = k
+    }
+
+}
+
+const m = new Managersss("akshat",21,22)
+console.log(m.isLegal());
+
+//SOME CLASS IMPLEMENTS INTERFACE  means vo sari cheezen jo us interface me hai vo class me honi hi chhiye at least .
+
+//that function is class can also be written as  
+//isLegall = ()=>{};
+
+// constructor me koi function likha hai to vo object ke bante hi automatically chalega;
+//class me koi function likha hai to jab object ban jaega tab us object ke paas ye property hogi ki objectname.islegal() karke us function ko use kar le
+
+
+
+//we can implement interfaces as class but not types
+
+//abstract class me kuch jada nahi hai bas , jo bhi function abstract karke likhte hian unme unki bodi me kuch ni rehta , bas el datatype dete hain , usko ham implementation ke time use karte hain , har functio ke andar apni body rehti hai jese print meow , bhow bhow ,neigh
+
+abstract class Uwse{
+    name:string;
+    age:number;
+    constructor(name:string,age:number){
+        this.name =name;
+        this.age = age;
+
+    }
+    greeet():string{
+return "A"
+    }
+     greet():void{
+console.log("hi")
+    }
+    abstract greeeet():{ 
+
+    }
+    abstract greeeeet:()=>string;
+}
+
+//Interface me function kaise likhte hain?
+// interface MyInterface {
+//     // Method signature (no body)
+//     greet(): string;
+
+//     // Function as property (arrow function type)
+//     sayHi: () => void;
+// }
+
+
+
+// class MyClass implements MyInterface {
+//     greet(): string {
+//         return "Hello!";
+//     }
+
+//     sayHi = () => {
+//         console.log("Hi");
+//     };
+// }
 
 
 
 
+// Class me function kaise likhte hain?
+
+// class MyClass {
+//     // Method
+//     greet(): string {
+//         return "Hello";
+//     }
+
+    // Property with arrow function
+//     sayHi: () => void = () => {
+//         console.log("Hi");
+//     };
+// }
+
+
+
+// Constructor ke andar function kaise likhte hain?
+// class MyClass {
+//     greet: () => string;
+
+//     constructor() {
+//         // Assigning function in constructor
+//         this.greet = () => {
+//             return "Hello from constructor";
+//         };
+//     }
+// }
 
 
 
 
+// Abstract method (no body)
+// abstract class MyAbstractClass {
+//     abstract greet(): string; // Must be implemented by subclass
+// }
+
+
+// Concrete method (with body)
+
+// abstract class MyAbstractClass {
+//     greet(): string {
+//         return "Hello from base class";
+//     }
+// }
+
+
+// Abstract property (function type)
+
+// abstract class MyAbstractClass {
+//     abstract sayHi: () => void;
+// }
 
 
 
+// Subclass must implement abstract members:
+// class MyClass extends MyAbstractClass {
+//     greet(): string {
+//         return "Hello from subclass";
+//     }
 
-
+//     sayHi = () => {
+//         console.log("Hi from subclass");
+//     };
+// }
 
 
 
